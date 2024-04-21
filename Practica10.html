@@ -1,60 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enlaces en Imágenes</title>
   <style>
+    h1 {
+      text-align: center;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 20px; /* Espaciado superior */
     }
+
     td {
       border: 1px solid black;
-      padding: 10px;
+      padding: 15px; /* Aumento del espaciado interno */
       text-align: center;
+      table-layout: fixed;
     }
+
     img {
       width: 100px;
       height: 100px;
       display: block;
       margin: 0 auto;
     }
+
+    a {
+      text-decoration: none; /* Eliminar subrayado de los enlaces */
+      color: #007bff; /* Color de los enlaces */
+      font-weight: bold; /* Texto en negrita */
+    }
+
+    a:hover {
+      text-decoration: underline; /* Subrayado al pasar el ratón */
+    }
   </style>
 </head>
+
 <body>
   <table>
     <tr>
-      <td><a href="rosas.html"><img src="rosa.jpg" alt="Rosa"></a></td>
-      <td><a href="girasoles.html"><img src="girasol.jpg" alt="Girasol"></a></td>
-      <td><a href="lirios.html"><img src="lirio.jpg" alt="Lirio"></a></td>
+      <td colspan="3"><h1 id="titulo">Juegos</h1></td> <!-- colspan para ocupar toda la tabla -->
     </tr>
     <tr>
-      <td>Rosa</td>
-      <td>Girasol</td>
-      <td>Lirio</td>
+      <td><img src="./Source/juegos/halo.jpg" alt="Halo"></td>
+      <td><img src="./Source/juegos/hl.jpg" alt="HalfLife"></td>
+      <td><img src="./Source/juegos/isasc.jpg" alt="The Binding of Isaac"></td>
     </tr>
     <tr>
-      <td><a href="tulipanes.html"><img src="tulipan.jpg" alt="Tulipán"></a></td>
-      <td><a href="margaritas.html"><img src="margarita.jpg" alt="Margarita"></a></td>
-      <td><a href="peonias.html"><img src="peonía.jpg" alt="Peonía"></a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/halo">Halo</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/halflife">Half-Life</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/the-binding-of-isaac">The Binding of Isaac</a></td>
     </tr>
     <tr>
-      <td>Tulipán</td>
-      <td>Margarita</td>
-      <td>Peonía</td>
+      <td><img src="./Source/juegos/souls.jpg" alt="DarkSouls"></td>
+      <td><img src="./Source/juegos/facry3.jpg" alt="FarCry 3"></td>
+      <td><img src="./Source/juegos/assinscreed.png" alt="Assassins Creed"></td>
     </tr>
     <tr>
-      <td><a href="orquideas.html"><img src="orquidea.jpg" alt="Orquídea"></a></td>
-      <td><a href="claveles.html"><img src="clavel.jpg" alt="Clavel"></a></td>
-      <td><a href="calas.html"><img src="cala.jpg" alt="Cala"></a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/dark-souls">Dark Souls</a></td>
+      <td><a href="https://vandal.elespanol.com/analisis/pc/far-cry-3/14517#p-13">FarCry 3</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/assassins-creed">Assassins Creed</a></td>
     </tr>
     <tr>
-      <td>Orquídea</td>
-      <td>Clavel</td>
-      <td>Cala</td>
+      <td><img src="./Source/juegos/gta.jpg" alt="GTA V"></td>
+      <td><img src="./Source/juegos/rdr2.jpg" alt="Red Dead Redemption"></td>
+      <td><img src="./Source/juegos/thewitcher.png" alt="The Witcher 3"></td>
     </tr>
+    <tr>
+      <td><a href="https://vandal.elespanol.com/sagas/grand-theft-auto">Grand Theft Auto V</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/red-dead">Red Dead Redemption</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/the-witcher">The Witcher 3</a></td>
+    </tr>
+    <tr>
+      <td><img src="./Source/juegos/meatboy.jpg" alt="Super Meatboy"></td>
+      <td><img src="./Source/juegos/minecraft.jpg" alt="Minecraft"></td>
+      <td><img src="./Source/juegos/zomboid.jpg" alt="Project Zomboid"></td>
+    </tr>
+    <tr>
+      <td><a href="https://vandal.elespanol.com/sagas/super-meat-boy">Super Meat Boy</a> </td>
+      <td><a href="https://vandal.elespanol.com/sagas/minecraft">Minecraft</a> </td>
+      <td><a href="https://vandal.elespanol.com/juegos/pc/project-zomboid/26860#p-13">Project Zomboid</a> </td>
+    </tr>
+    <tr>
+      <td><img src="./Source/juegos/subnautica.jpg" alt="Subnautica"></td>
+      <td><img src="./Source/juegos/fallout.jpg" alt="Fallout"></td>
+      <td><img src="./Source/juegos/amnesia.jpg" alt="Amnesia"></td>
+    </tr>
+    <tr>
+      <td><a href="https://vandal.elespanol.com/sagas/subnautica">Subnautica</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/fallout">Fallout</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/amnesia">Amnesia</a></td>
+    </tr>
+
+    <tr>
+      <td><img src="./Source/juegos/overwatch.png" alt="Overwatch"></td>
+      <td><img src="./Source/juegos/diablo3.png" alt="Diablo III"></td>
+      <td><img src="./Source/juegos/cod.jpg" alt="Call of Duty: Modern Warfare"></td>
+    </tr>
+    <tr>
+      <td><a href="https://vandal.elespanol.com/sagas/overwatch">Overwatch</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/diablo">Diablo III</a></td>
+      <td><a href="https://vandal.elespanol.com/sagas/call-of-duty">Call of Duty: Modern Warfare</a></td>
+    </tr>
+
   </table>
 </body>
+
 </html>
-  
