@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Tabla de Datos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+    <style>
+        table {
+            margin: 0 auto; /* Centra la tabla en la página */
+            width: 80%; /* Ancho máximo de la tabla */
+            border-collapse: collapse; /* Combina los bordes de las celdas */
+        }
+        td {
+            padding: 10px; /* Espacio interno de las celdas */
+            text-align: left; /* Alineación del texto en las celdas */
+        }
+        caption {
+            text-align: center; /* Centra el título de la tabla */
+            margin-bottom: 20px; /* Espacio inferior del título */
+        }
+    </style>
 </head>
 <body>
-  <img src="/Trabajo Practico - HTML/Source/Blog/batido.jpg" width="200" style=margin-left:40%> </img>
-<div>
-  <h3>Datos Personales:</h3>
-  <p>Fecha de Nacimiento: 05/11/2000<p>
-  <p>Nacionalidad: Argentino<p>
-</div>
-<div>
-<div style="margin-left: 20px;">
-  <h3>Datos Personales:</h3>
-  <p>Fecha de Nacimiento: 05/11/2000<p>
-  <p>Nacionalidad: Argentino<p>
-</div>
-<div>
-  <h3>Datos Personales:</h3>
-  <p>Fecha de Nacimiento: 05/11/2000<p>
-  <p>Nacionalidad: Argentino<p>
-</div>
-</div>
+    <table border="1">
+        <caption>
+            <strong>
+                <img src="/Trabajo Practico - HTML/Source/Curriculum/fotoCurriculum.jpeg" alt="Harvey Specter" width="200" style="clip-path: circle(40%);">
+            </strong><br>
+        </caption>
+        <tr>
+            <td colspan="2" rowspan="1" >
+                <strong>Datos Personales:</strong><br>
+                <ul>
+                    <li><b>Nombre:</b> Pavon Juan Gabriel</li>
+                    <li><b>Fecha de Nacimiento:</b> 05/11/2000</li>
+                    <li><b>Locacion:</b> Apostoles, Misiones, Argentina.</li>
+                    <li><b>Teléfono:</b> 3751-312279</li>
+                    <li><b>Correo electrónico:</b> juangabrielpavon@gmail.com</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Objetivos:</strong><br>
+                <p>Buscar un rol donde pueda utilizar mis conocimientos en desarrollo web para crear aplicaciones y sitios web funcionales y atractivos que satisfagan las necesidades de los clientes y usuarios.</p>
+            </td>
+            <td>
+                <strong>Estudios Realizados:</strong><br>
+                <ul>
+                    <h4>Instituciones:</h4>
+                    <li>Bachiller en Administracion de Empresas, Escuela Normal Superior Nº 2, 2018 </li>
+                    <li>LSI-ASC, Universidad Nacional de Misiones (Fceqyn), 2019-Actualidad</li>
+                    <h4>Cursos Virtuales:</h3>
+                    <li>Desarrollo de Videojuegos con Unity (Udemy).</li>
+                    <li>Blender & Substance: Modelado y texturizado para videojuegos (Udemy).</li>
+                    <li>Fundamentos de la Programación (Udemy).</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Antecedentes Laborales:</strong><br>
+                <ul>
+                    <li>Soporte Técnico, Grupo de Teatro  “Santa Viruta” (2020-2023)</li>
+                    <li>Coordinación de Stands de Ventas, Fiesta Nacional de la orquidea y provincial de la flor (2021)</li>
+                </ul>
+            </td>
+            <td>
+                <strong>Pasatiempo:</strong><br>
+                Me entusiasma mejorar mi nivel de inglés. Soy apasionado por el armado y reparación de computadoras de escritorio y notebooks. Dedico mi tiempo libre a jugar videojuegos, pasar momentos con familiares y amigos, y disfrutar de una buena lectura de vez en cuando.
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
