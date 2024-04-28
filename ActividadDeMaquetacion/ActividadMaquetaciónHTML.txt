@@ -1,0 +1,26 @@
+Objetivo: Crear la estructura básica de una página web utilizando únicamente HTML. Esta actividad te permitirá practicar la organización y estructuración de contenido sin depender de estilos externos.
+
+Instrucciones:
+
+    Página de Inicio:
+        Crea un documento HTML llamado "index.html".
+        Define la estructura básica de HTML con las etiquetas <html>, <head> y <body>.
+        Agrega un título descriptivo a la página utilizando la etiqueta <h1>.
+        Incluye un párrafo de introducción sobre el tema de la página utilizando la etiqueta <p>.
+
+    Secciones:
+        Divide el contenido de la página en al menos tres secciones utilizando la etiqueta <section>.
+        Cada sección debe tener un título descriptivo utilizando la etiqueta <h2> y un breve párrafo de contenido utilizando la etiqueta <p>.
+
+    Listas y Enlaces:
+        Agrega una lista ordenada o desordenada que contenga al menos tres elementos utilizando las etiquetas <ul> o <ol> y <li>.
+        Incluye enlaces a páginas externas utilizando la etiqueta <a>. Pueden ser enlaces a sitios web relevantes al tema de la página.
+
+    Imágenes:
+        Inserta al menos dos imágenes utilizando la etiqueta <img>. Pueden ser imágenes relacionadas con el contenido de la página.
+
+    Footer:
+        Crea un pie de página utilizando la etiqueta <footer>.
+        Incluye información de contacto o derechos de autor utilizando texto simple.
+
+Nota: Recuerda que en esta actividad no se permite el uso de CSS. El objetivo es enfocarse en la estructura y organización del contenido utilizando solo HTML.
