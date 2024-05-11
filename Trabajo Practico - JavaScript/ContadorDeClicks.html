@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Clicks</title>
+    <style>
+        #contador {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de Clicks</h1>
+
+    <!-- Contador de Clicks -->
+    <p>Clicks: <span id="contador">0</span></p>
+    <p>Skcilc: <span id="contador1">0</span></p>
+
+    <!-- Botón -->
+    <button id="click">contar</button>
+
+    <script>
+        // Obtener el elemento del contador de clics y el botón
+        const clickCounter = document.getElementById('contador');
+        const clickCounter1 = document.getElementById('contador1');
+        const clickButton = document.getElementById('click');
+
+        // Inicializar el contador
+        let count = 0;
+        let count1 = 0;
+
+        // Actualizar el contador de clics y mostrarlo en la página
+        function sumar() {
+            count++;
+            count1--;
+            clickCounter.textContent = count;
+            clickCounter1.textContent = count1;
+        }
+
+        // Asociacion del evento al boton
+        clickButton.addEventListener('click', sumar);
+    </script>
+
+</body>
+</html>

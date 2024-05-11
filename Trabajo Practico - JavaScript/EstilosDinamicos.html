@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Dinámico</title>
+    <style>
+        /* Estilo predeterminado para los elementos */
+        .elemento {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        /* Estilo cuando se selecciona un elemento */
+        .estilo {
+            background-color: yellow;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estilos Dinámico</h1>
+
+    <!-- Lista de elementos -->
+    <div class="elemento" onclick="cambiarEstilo(this)">Elemento 1</div>
+    <div class="elemento" onclick="cambiarEstilo(this)">Elemento 2</div>
+    <div class="elemento" onclick="cambiarEstilo(this)">Elemento 3</div>
+
+    <script>
+        // Función para cambiar el estilo del elemento al hacer clic
+        function cambiarEstilo(elemento) {
+            // Verificamos si el elemento ya tiene la clase "seleccionado"
+            if (elemento.classList.contains('estilo')) {
+                // Si ya tiene la clase, la quitamos
+                elemento.classList.remove('estilo');
+            } else {
+                // Si no tiene la clase, la añadimos
+                elemento.classList.add('estilo');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Formulario</h1>
+    <form id="registroForm" onsubmit="return validarFormulario()">
+        <h2 style="text-align: center;">Registro</h2>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <input type="email" id="email" name="email" placeholder="Correo electrónico">
+        <input type="password" id="password" name="password" placeholder="Contraseña">
+        <input type="submit" value="Registrarse">
+        <div id="errorMensaje" class="error-message"></div>
+    </form>
+
+    <script>
+        function validarFormulario() {
+            // Obtenemos los valores de los campos
+            var nombre = document.getElementById('nombre').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('password').value.trim();
+
+            // Verificamos si algún campo está vacío
+            if (nombre === '' || email === '' || password === '') {
+                // Mostramos mensaje de error
+                document.getElementById('errorMensaje').innerText = 'Por favor, complete todos los campos.';
+                // Evitamos que se envíe el formulario
+                return false;
+            }
+
+            // Si todos los campos están completos, permitimos el envío del formulario
+            return true;
+        }
+    </script>
+
+</body>
+</html>
