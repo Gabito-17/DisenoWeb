@@ -59,10 +59,10 @@
             justify-content: space-between;
             align-items: center;
         }
-        .delete-btn {
+        .btnBorrar {
             background-color: #dc3545;
         }
-        .delete-btn:hover {
+        .btnBorrar:hover {
             background-color: #c82333;
         }
     </style>
@@ -84,7 +84,7 @@
 
         if (textoTarea !== "") {
             var li = document.createElement("li");
-            li.innerHTML = textoTarea + '<button class="delete-btn" onclick="eliminarTarea(this)">Eliminar</button>';
+            li.innerHTML = textoTarea + '<button class="btnBorrar" onclick="eliminarTarea(this)">Eliminar</button>';
             listaTarea.appendChild(li);
             tarea.value = "";
         } else {

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <img src="/Trabajo Practico - HTML/Source/juegos/fallout.jpg" alt="Imagen 1">
+        <img src="/Trabajo Practico - HTML/Source/juegos/diablo3.png" alt="Imagen 2">
+        <img src="/Trabajo Practico - HTML/Source/juegos/halo.jpg" alt="Imagen 3">
+        <img src="/Trabajo Practico - HTML/Source/juegos/facry3.jpg" alt="Imagen 4">
+        <img src="/Trabajo Practico - HTML/Source/juegos/cod.jpg" alt="Imagen 5">
+        <img src="/Trabajo Practico - HTML/Source/juegos/meatboy.jpg" alt="Imagen 6">
+        <img src="/Trabajo Practico - HTML/Source/juegos/zomboid.jpg" alt="Imagen 7">
+        <img src="/Trabajo Practico - HTML/Source/juegos/souls.jpg" alt="Imagen 8">
+        <img src="/Trabajo Practico - HTML/Source/juegos/gta.jpg" alt="Imagen 9">
+    </div>
+</body>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #007bff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+</style>
+
+</html>
