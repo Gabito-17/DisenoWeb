@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+        }
+        .tarjeta {
+            width: calc(25% - 10px);
+            height: 100px;
+            margin: 5px;
+            background-color: #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .tarjeta.volteada {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor" id="tableroJuego">
+    <!-- Las tarjetas se agregarán aquí con JavaScript -->
+</div>
+
+<script>
+    var tableroJuego = document.getElementById('tableroJuego');
+    var tarjetas = [];
+
+    // Crear las tarjetas del juego
+    for (var i = 0; i < 8; i++) {
+        var tarjeta = document.createElement('div');
+        tarjeta.className = 'tarjeta';
+        tarjeta.dataset.valor = i;
+        tarjeta.addEventListener('click', voltearTarjeta);
+        tableroJuego.appendChild(tarjeta);
+        tarjetas.push(tarjeta.cloneNode(true));
+    }
+
+    // Duplicar las tarjetas para tener pares
+    tarjetas = tarjetas.concat(tarjetas);
+
+    // Barajar las tarjetas
+    tarjetas.sort(function() { return 0.5 - Math.random() });
+
+    // Agregar las tarjetas barajadas al tablero
+    tarjetas.forEach(function(tarjeta) {
+        tableroJuego.appendChild(tarjeta);
+    });
+
+    var tarjetasVolteadas = [];
+    var bloquearTablero = false;
+
+    // Función para voltear una tarjeta
+    function voltearTarjeta() {
+        if (bloquearTablero) return;
+        if (this.classList.contains('volteada')) return;
+        this.classList.add('volteada');
+        if (tarjetasVolteadas.length === 0) {
+            tarjetasVolteadas.push(this);
+            return;
+        }
+        tarjetasVolteadas.push(this);
+        comprobarCoincidencia();
+    }
+
+    // Función para verificar si hay coincidencia
+    function comprobarCoincidencia() {
+        var esCoincidencia = tarjetasVolteadas[0].dataset.valor === tarjetasVolteadas[1].dataset.valor;
+        esCoincidencia ? desactivarTarjetas() : voltearTarjetas();
+    }
+
+    // Función para desactivar las tarjetas coincidentes
+    function desactivarTarjetas() {
+        tarjetasVolteadas[0].removeEventListener('click', voltearTarjeta);
+        tarjetasVolteadas[1].removeEventListener('click', voltearTarjeta);
+        reiniciarTablero();
+    }
+
+    // Función para voltear las tarjetas si no coinciden
+    function voltearTarjetas() {
+        bloquearTablero = true;
+        setTimeout(function() {
+            tarjetasVolteadas[0].classList.remove('volteada');
+            tarjetasVolteadas[1].classList.remove('volteada');
+            reiniciarTablero();
+        }, 1000);
+    }
+
+    // Función para reiniciar el tablero después de cada intento
+    function reiniciarTablero() {
+        tarjetasVolteadas = [];
+        bloquearTablero = false;
+    }
+</script>
+
+</body>
+</html>
