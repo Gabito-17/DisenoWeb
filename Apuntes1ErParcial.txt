@@ -1,0 +1,10 @@
+punto 1 html, fijarse donde van cada una de las etiquetas (estudiar estructura de html), 
+donde se llaman a los stilos y a las etiquetas script.
+
+Css, como se arma cada propiedad,donde puede ser invocado en el caso de que se 
+sobrescriba un estilo cual predomina. 
+
+JavaScript, donde llamar un script, estudiar los eventos que se utilizaron.
+
+PHP, como llamar un script php, como invocar un archivo, como hacer el pasaje de la informacion. 
+Como funcionan las estructuras e indices. 
